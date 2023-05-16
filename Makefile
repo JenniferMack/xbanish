@@ -8,8 +8,8 @@ PREFIX	?= /usr/local
 BINDIR	?= $(PREFIX)/bin
 MANDIR	?= $(PREFIX)/man/man1
 
-INSTALL_PROGRAM ?= install -s
-INSTALL_DATA ?= install
+INSTALL_PROGRAM ?= sudo install -s
+INSTALL_DATA ?= sudo install
 
 LIBS	?= x11 xfixes xi xext
 INCLUDES?= `pkg-config --cflags $(LIBS)`
