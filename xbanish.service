@@ -1,0 +1,14 @@
+# ~/.config/systemd/user/xbanish.service
+[Unit]
+Description=xbanish
+After=default.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/xbanish -s
+Restart=on-failure
+StartLimitBurst=10
+RestartSec=30
+
+[Install]
+WantedBy=default.target
